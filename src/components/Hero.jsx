@@ -1,7 +1,7 @@
 import "./Hero.css";
 
 const stats = [
-  { icon: "⚡", num: "3.8", label: "Years of Experience" },
+  { icon: "⚡", num: "3.8+", label: "Years of Experience" },
   { icon: "🏆", num: "2×", label: "MVP Award Winner" },
   { icon: "🚀", num: "4+", label: "Production Projects" },
   { icon: "🎓", num: "2", label: "Interns Mentored" },
