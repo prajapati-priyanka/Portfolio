@@ -40,7 +40,7 @@ const projects = [
     github: "https://github.com/prajapati-priyanka/my-app",
     live: "https://pine-apparel-ecomm.netlify.app/",
     desc: "A fashion ecommerce platform with product listing, filters, search, cart management, wishlist, price calculation, and address management — all with authentication.",
-    stack: ["ReactJS", "Context API", "Reducer", "CSS3"],
+    stack: ["ReactJS", "Context API", "Reducer", "CSS3", "Pine UI"],
   },
   {
     type: "CSS Component Library",
