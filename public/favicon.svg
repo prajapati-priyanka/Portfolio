@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#0e0e0e"/>
+
+  <!-- Left bracket -->
+  <path d="M9 8 L5 16 L9 24" stroke="#e8c97d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right bracket -->
+  <path d="M23 8 L27 16 L23 24" stroke="#e8c97d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- PP initials -->
+  <text x="16" y="20.5" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#e8c97d" text-anchor="middle" letter-spacing="-0.5">PP</text>
+</svg>
