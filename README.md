@@ -1,8 +1,8 @@
 # Priyanka Prajapati — Frontend Developer Portfolio
 
-A personal portfolio website built with **React + Vite**, showcasing my work, skills, and experience as a Frontend Developer with 3.8 years of industry experience.
+A personal portfolio website built with **React + Vite**, showcasing my work, skills, and experience as a Frontend Developer with 3.8+ years of industry experience.
 
-🔗 **Live Site:** [your-portfolio-url.netlify.app](#)
+🔗 **Live Site:** [https://priyanka-prajapati-portfolio.netlify.app/](#)
 
 
 ## 🚀 Getting Started
