@@ -1,10 +1,13 @@
-.contact-section { background: var(--bg); }
+.contact-page {
+  background: var(--bg);
+  padding: 8rem 5vw 6rem;
+  min-height: 100vh;
+}
 .contact-inner { max-width: 600px; }
 .contact-intro {
   color: var(--muted);
-  margin-top: -2rem;
-  margin-bottom: 0;
   font-size: 0.95rem;
+  margin-bottom: 0;
 }
 .contact-links {
   display: flex;
@@ -26,5 +29,15 @@
   transition: all 0.2s;
 }
 .contact-link:hover { border-color: var(--accent); color: var(--accent); transform: translateX(4px); }
-.contact-link-icon { font-size: 1.1rem; width: 1.5rem; text-align: center; }
+.contact-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  color: var(--accent);
+}
 .contact-link-label { color: var(--muted); font-size: 0.75rem; display: block; margin-top: 0.1rem; }
+
+@media (max-width: 768px) {
+  .contact-page { padding-top: 7rem; }
+}

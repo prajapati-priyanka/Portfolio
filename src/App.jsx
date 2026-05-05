@@ -1,59 +1,34 @@
 import { useEffect, useRef } from "react";
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import "./index.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
-  useEffect(() => {
-    const reveals = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, i) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add("visible"), i * 80);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    reveals.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+import Footer from "./components/Footer/Footer";
+import About from "./pages/About/About";
+import Projects from "./pages/Projects/Projects";
+import Contact from "./pages/Contact/Contact";
+import Home from "./pages/Home/Home";
+import Navbar from "./components/Navbar/Navbar.jsx";
 
-  useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".nav-links a");
-    const handleScroll = () => {
-      let current = "";
-      sections.forEach((s) => {
-        if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute("id");
-      });
-      navLinks.forEach((a) => {
-        a.style.color =
-          a.getAttribute("href") === `#${current}` ? "var(--text)" : "";
-      });
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+export default function App() {
+
 
   return (
-    <>
-      <Nav />
-      <Hero />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
+    <BrowserRouter>
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects/>} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </BrowserRouter>
+     
+  
   );
 }
 
-export default App;
+

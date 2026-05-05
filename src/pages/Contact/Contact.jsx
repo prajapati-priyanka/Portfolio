@@ -1,6 +1,6 @@
+import RevealBox from "../../components/RevealBox";
 import "./Contact.css";
 
-// Contact Icons
 const EmailIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <rect width="20" height="16" x="2" y="4" rx="2"/>
@@ -25,23 +25,19 @@ const GitHubIcon = () => (
 const contactLinks = [
   {
     href: "https://mail.google.com/mail/u/0/#inbox",
-    icon: EmailIcon(),
-    text: "contact.priyankaprajapati@gmail.com",
+    Icon: EmailIcon,
     label: "Email",
     external: true,
-
   },
   {
     href: "https://www.linkedin.com/in/priyanka-prajapati-853098146/",
-    icon: LinkedInIcon(),
-    text: "linkedin.com/in/priyanka-prajapati",
+    Icon: LinkedInIcon,
     label: "LinkedIn",
     external: true,
   },
   {
     href: "https://github.com/prajapati-priyanka",
-    icon: GitHubIcon(),
-    text: "github.com/prajapati-priyanka",
+    Icon: GitHubIcon,
     label: "GitHub",
     external: true,
   },
@@ -49,31 +45,34 @@ const contactLinks = [
 
 export default function Contact() {
   return (
-    <section className="contact-section" id="contact">
+    <section className="contact-page">
       <div className="section-label">Let's talk</div>
       <div className="contact-inner">
-        <h2 className="section-title reveal">
+        <RevealBox tag="h2" className="section-title">
           Get In <span>Touch</span>
-        </h2>
-        <p className="contact-intro reveal">
-          I am currently open to Frontend Developer opportunities. Feel free to
-          reach out — I would love to connect.
-        </p>
+        </RevealBox>
+        <RevealBox>
+          <p className="contact-intro">
+            I am currently open to Frontend Developer opportunities. Feel free to
+            reach out — I would love to connect.
+          </p>
+        </RevealBox>
         <div className="contact-links">
-          {contactLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="contact-link reveal"
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noreferrer" : undefined}
-            >
-              <span className="contact-link-icon">{link.icon}</span>
-              <div>
-                {link.label}
-                {/* <span className="contact-link-label">{link.label}</span> */}
-              </div>
-            </a>
+          {contactLinks.map((link, i) => (
+            <RevealBox key={link.label} delay={i * 80}>
+              <a
+                href={link.href}
+                className="contact-link"
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noreferrer" : undefined}
+              >
+                <span className="contact-link-icon"><link.Icon /></span>
+                <div>
+                  {link.label}
+                  {/* <span className="contact-link-label">{link.label}</span> */}
+                </div>
+              </a>
+            </RevealBox>
           ))}
         </div>
       </div>
